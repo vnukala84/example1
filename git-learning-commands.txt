@@ -1,0 +1,259 @@
+Microsoft Windows [Version 10.0.18363.778]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\VenkatNukala>git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+C:\Users\VenkatNukala>git --version
+git version 2.25.1.windows.1
+
+C:\Users\VenkatNukala>git --branch
+unknown option: --branch
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+C:\Users\VenkatNukala>git branch
+fatal: not a git repository (or any of the parent directories): .git
+
+C:\Users\VenkatNukala>cd Desktop
+
+C:\Users\VenkatNukala\Desktop>mkdir git_learning
+
+C:\Users\VenkatNukala\Desktop>cd git_learning
+
+C:\Users\VenkatNukala\Desktop\git_learning>git init
+Initialized empty Git repository in C:/Users/VenkatNukala/Desktop/git_learning/.git/
+
+C:\Users\VenkatNukala\Desktop\git_learning>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 6015-180C
+
+ Directory of C:\Users\VenkatNukala\Desktop\git_learning
+
+05/09/2020  08:23 PM    <DIR>          .
+05/09/2020  08:23 PM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  26,578,083,840 bytes free
+
+C:\Users\VenkatNukala\Desktop\git_learning>git config -global user.name "Venkat"
+error: did you mean `--global` (with two dashes)?
+
+C:\Users\VenkatNukala\Desktop\git_learning>git config --global user.name "Venkat"
+
+C:\Users\VenkatNukala\Desktop\git_learning>git config --global user.email "nukala.venkat84@gmail.com"
+
+C:\Users\VenkatNukala\Desktop\git_learning>di
+'di' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\VenkatNukala\Desktop\git_learning>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 6015-180C
+
+ Directory of C:\Users\VenkatNukala\Desktop\git_learning
+
+05/09/2020  08:51 PM    <DIR>          .
+05/09/2020  08:51 PM    <DIR>          ..
+05/09/2020  08:51 PM                 0 first file.txt
+               1 File(s)              0 bytes
+               2 Dir(s)  26,576,478,208 bytes free
+
+C:\Users\VenkatNukala\Desktop\git_learning>git add "first file.txt"
+
+C:\Users\VenkatNukala\Desktop\git_learning>git commit -m "first commit"
+[master (root-commit) f18034f] first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 first file.txt
+
+C:\Users\VenkatNukala\Desktop\git_learning>git remote add origin git@github.com:vnukala84/example1.git
+
+C:\Users\VenkatNukala\Desktop\git_learning>git push -u origin master
+The authenticity of host 'github.com (13.234.176.102)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? ye
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com,13.234.176.102' (RSA) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+C:\Users\VenkatNukala\Desktop\git_learning>ssh-keygen -t rsa -b 4096 -C "nukala.venkat84@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (C:\Users\VenkatNukala/.ssh/id_rsa):
+C:\Users\VenkatNukala/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in C:\Users\VenkatNukala/.ssh/id_rsa.
+Your public key has been saved in C:\Users\VenkatNukala/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:Z4k4pebZJDJAOmyHprmOPXbsIkcxDnmhJ38i1z09eHw nukala.venkat84@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|  .              |
+|.oo              |
+|oB.o    .        |
+|Oo*.   + . .     |
+|oB +o.*+S +      |
+|..* o=+*=oE      |
+|.+ +  oo.o       |
+|+.= o            |
+|.=.=.            |
++----[SHA256]-----+
+
+C:\Users\VenkatNukala\Desktop\git_learning>git remote add origin git@github.com:vnukala84/example1.git
+fatal: remote origin already exists.
+
+C:\Users\VenkatNukala\Desktop\git_learning>git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 216 bytes | 216.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:vnukala84/example1.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+C:\Users\VenkatNukala\Desktop\git_learning>git add "first file.txt"
+
+C:\Users\VenkatNukala\Desktop\git_learning>git commit -m "second commit"
+[master 6068a62] second commit
+ 1 file changed, 1 insertion(+)
+
+C:\Users\VenkatNukala\Desktop\git_learning>git diff
+
+C:\Users\VenkatNukala\Desktop\git_learning>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\VenkatNukala\Desktop\git_learning>git push
+Warning: Permanently added the RSA host key for IP address '13.234.210.38' to the list of known hosts.
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 258 bytes | 64.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:vnukala84/example1.git
+   f18034f..6068a62  master -> master
+
+C:\Users\VenkatNukala\Desktop\git_learning>git diff
+
+C:\Users\VenkatNukala\Desktop\git_learning>git log
+commit 6068a62edb2353f6091d0cb888e7452c099cf10e (HEAD -> master, origin/master)
+Author: Venkat <nukala.venkat84@gmail.com>
+Date:   Sat May 9 21:17:20 2020 +0530
+
+    second commit
+
+commit f18034fc1ad5efc5c71a3e18624a7faddf9c43bf
+Author: Venkat <nukala.venkat84@gmail.com>
+Date:   Sat May 9 20:54:17 2020 +0530
+
+    first commit
+
+C:\Users\VenkatNukala\Desktop\git_learning>git show
+commit 6068a62edb2353f6091d0cb888e7452c099cf10e (HEAD -> master, origin/master)
+Author: Venkat <nukala.venkat84@gmail.com>
+Date:   Sat May 9 21:17:20 2020 +0530
+
+    second commit
+
+diff --git a/first file.txt b/first file.txt
+index e69de29..7be73de 100644
+--- a/first file.txt
++++ b/first file.txt
+@@ -0,0 +1 @@
++hello venkat
+\ No newline at end of file
+
+C:\Users\VenkatNukala\Desktop\git_learning>git branch
+* master
+
+C:\Users\VenkatNukala\Desktop\git_learning>git branch branch1
+
+C:\Users\VenkatNukala\Desktop\git_learning>git checkout branch1
+Switched to branch 'branch1'
+
+C:\Users\VenkatNukala\Desktop\git_learning>git add "first file.txt"
+
+C:\Users\VenkatNukala\Desktop\git_learning>git commit -m "branch commit"
+[branch1 1344b36] branch commit
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+C:\Users\VenkatNukala\Desktop\git_learning>git push
+fatal: The current branch branch1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin branch1
+
+
+C:\Users\VenkatNukala\Desktop\git_learning>git push --set-upstream origin brabch1
+error: src refspec brabch1 does not match any
+error: failed to push some refs to 'git@github.com:vnukala84/example1.git'
+
+C:\Users\VenkatNukala\Desktop\git_learning>git push --set-upstream origin branch1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 272 bytes | 90.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'branch1' on GitHub by visiting:
+remote:      https://github.com/vnukala84/example1/pull/new/branch1
+remote:
+To github.com:vnukala84/example1.git
+ * [new branch]      branch1 -> branch1
+Branch 'branch1' set up to track remote branch 'branch1' from 'origin'.
+
+C:\Users\VenkatNukala\Desktop\git_learning>
+C:\Users\VenkatNukala\Desktop\git_learning>
+C:\Users\VenkatNukala\Desktop\git_learning>
